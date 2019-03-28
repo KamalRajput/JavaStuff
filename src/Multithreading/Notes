@@ -74,3 +74,8 @@ As the name says, ReentrantLock allow threads to enter into lock on a resource m
 Reentrant Locks also offer a fairness parameter, by which the lock would abide by the order of the lock request i.e. after a
  thread unlocks the resource, the lock would go to the thread which has been waiting for the longest time. This fairness mode
   is set up by passing true to the constructor of the lock.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+A semaphore controls access to a shared resource through the use of a counter. 
+If the counter is greater than zero, then access is allowed. If it is zero, then access is denied. 
+What the counter is counting are permits that allow access to the shared resource. 
+Thus, to access the resource, a thread must be granted a permit from the semaphore.
