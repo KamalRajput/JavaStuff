@@ -1,0 +1,25 @@
+Reflection APi is used to inspect and modify the behaviour of class at runtime.
+Using reflection - create objects, invoke methods and acess private fields without getter and setter.
+
+Key class : java.lang.class.
+Every class that is loaded into memory into the JVM is represented as an instance of java.lang.class.
+
+And using the class instance, we can access Constructor, methods, fields, Annotations.
+ex - java.lang.reflect.Constructor
+     java.lang.reflect.Method
+     java.lang.reflect.Field
+     java.lang.reflect.Annotation
+
+By default only public fields will be accessed. If the fields in the  class are not public , reflection APi will return an empty array of methods, constructors and fields.
+
+Also , we can access a specific constructor /method in class. for ex - if we have two constructor in a class(one blank, and one parameterized). And if we want to access a specific one. Then
+we can use it by passing parameters accordingly . For blank constructor pass null.
+
+
+See code : ReflectionExample.java
+
+for modifying private fields, firsty we have to fetch the declared field and then setAccesible as true.
+We can also Access Annotations on our application classes.
+We can fetch annotation on the class level , constructors, fields, methods by calling getAnnotations method on the class/constructors instance.
+
+Also we can access the fields on annotation by typecasting the annotation to a specific type , and then calling fields on annotations.

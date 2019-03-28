@@ -1,0 +1,38 @@
+Internationalization is also known as I18N bcoz there are 18 letters between I and N. It is a process of supporting multiple languages and formats that are local to a specific location.
+For example - if your application is running at different location like USA, uk ,india and france. We need to make sure that the application is supporting English , hindi and french. Not only
+the language we also need to consider the date and number format , as it is diff. in diff. countries.
+ex - USA : mm/dd/yyyy
+    INDIA : dd/mm/yyyy
+
+    So we cannot reWrite our application for each countries, so here internationalization use comes into picture.
+    We can use key inbuilt classes such as Locale, NumberFormat and DateFormat in java.
+
+======Locale : represent a geographical location . Combination of country and language.
+    ex- US_EN ( US- english)
+    IN_PA (INDIA -punjabi) - one of the locale for punjabi
+
+         present in java.util.locale package.
+            important methods : getDefault() - pickup local lngg. setting of the machine.
+                                 setDefault(Locale l)
+                                 getCountries()
+                                 getLanguages()
+              Also provide some static constants like Locale.UK/Locale.US which will provide locale for diff. countries instead of creating them explicitly.
+
+
+======NumberFormat: class which is used to represent numbers in diff. format according to the location.
+     for ex - In India : 4,56,789.123
+                   USA : 456,789.123
+         present in java.text.NumberFormat
+         methods: getInstance
+                  getNumberInstance(Locale info.)
+                  getCurrencyInstance
+                  getPercentageInstance
+
+======DateFormat is used to format the date according to diff. locale. Present in java.text.DateFormat
+        Methods : getInstance
+                  getDateInstance
+                  getDateInstance(int style)style=0,1,2,3(FULL,LONG,MEDIUM,SHORT- diff. date representation)
+
+======SimpleDateFormat : used to convert  date format to any other.
+                Format : Object to String
+                parse : String to Object

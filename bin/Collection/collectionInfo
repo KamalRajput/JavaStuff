@@ -1,0 +1,7 @@
+ Collection :  List,set, queue
+
+
+ Comparable - natural sorting (compareTo)
+ Comparator - used when we want to perform customized sorting on the collection. (compare)
+ By default String , and other wrapper classes has compareTo method, StringBuffer doesnt has this method.
+ Thats why ClassCastException is thrown when we used stringBuffer with TreeSet
